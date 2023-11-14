@@ -98,5 +98,10 @@ namespace Dish4Good_v2
                 }
             }
         }
+
+        private void lblStatusKonfirmasiDonatur_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
