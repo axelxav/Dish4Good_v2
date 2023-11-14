@@ -16,6 +16,8 @@ namespace Dish4Good_v2
         private const string ConnectionString = "Host=localhost;Username=postgres;Password=1234;Database=Dish4Good";
         private int userID; // ID pengguna yang sedang login
 
+        private System.Windows.Forms.TextBox txtDeskripsiDonasi;
+
         public DonaturForm(int userID)
         {
             InitializeComponent();
@@ -28,7 +30,6 @@ namespace Dish4Good_v2
         private void LoadPermintaanDonasi()
         {
             // Mengambil data permintaan donasi dari database
-            // Implementasi dapat disesuaikan sesuai dengan struktur database Anda
             using (NpgsqlConnection connection = new NpgsqlConnection(ConnectionString))
             {
                 connection.Open();
@@ -57,7 +58,8 @@ namespace Dish4Good_v2
             DataGridViewRow row = dataGridViewPermintaanDonasi.Rows[selectedRow];
 
             // Tampilkan deskripsi permintaan donasi pada TextBox
-            txtDeskripsiDonasi.Text = row.Cells["Deskripsi"].Value.ToString();
+            string deskripsiDonasi = row.Cells["Deskripsi"].Value.ToString();
+            txtDeskripsiDonasi.Text = deskripsiDonasi;
         }
 
         private void btnKonfirmasiDonasi_Click(object sender, EventArgs e)
