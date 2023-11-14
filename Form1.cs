@@ -6,5 +6,10 @@ namespace Dish4Good_v2
         {
             InitializeComponent();
         }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
