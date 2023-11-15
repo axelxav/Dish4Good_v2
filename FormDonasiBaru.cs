@@ -14,8 +14,9 @@ namespace Dish4Good_v2
     public partial class FormDonasiBaru : Form
     {
         private const string connectionString = "Host=localhost;Username=postgres;Password=1234;Database=Dish4Good";
+        private int loggedInUserId;
 
-        public FormDonasiBaru()
+        public FormDonasiBaru(int usedId)
         {
             InitializeComponent();
 
@@ -25,22 +26,7 @@ namespace Dish4Good_v2
 
             // Pilih default jenis donasi (opsional)
             cmbJenisDonasi.SelectedIndex = 0;
-        }
-
-        private void btnTambahDonasi_Click(object sender, EventArgs e)
-        {
-            string jenisDonasi = cmbJenisDonasi.Text;
-            string pesanDonasi = txtPesanDonasi.Text;
-
-            // Validasi data input (sesuai kebutuhan)
-
-            // Simpan permintaan donasi baru ke database
-            SaveDonasiToDatabase(jenisDonasi, pesanDonasi);
-
-            MessageBox.Show("Permintaan donasi berhasil ditambahkan!");
-
-            // Tutup form setelah menambahkan permintaan donasi
-            this.Close();
+            loggedInUserId = usedId;
         }
 
         private void SaveDonasiToDatabase(string jenisDonasi, string pesanDonasi)
@@ -67,9 +53,7 @@ namespace Dish4Good_v2
 
         private int GetLoggedInUserId()
         {
-            // Implementasi metode ini sesuai dengan cara Anda menyimpan informasi pengguna yang login
-            // Misalnya, Anda dapat menyimpan ID pengguna yang login pada variabel atau properti global.
-            return 1; // Ganti dengan implementasi sesuai kebutuhan
+            return loggedInUserId; // Ganti dengan implementasi sesuai kebutuhan
         }
 
         private void btnTambahDonasi_Click_1(object sender, EventArgs e)

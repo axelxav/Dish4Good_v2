@@ -38,6 +38,7 @@
             // 
             // cmbJenisDonasi
             // 
+            cmbJenisDonasi.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbJenisDonasi.FormattingEnabled = true;
             cmbJenisDonasi.Location = new Point(189, 106);
             cmbJenisDonasi.Name = "cmbJenisDonasi";
