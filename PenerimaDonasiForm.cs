@@ -78,6 +78,37 @@ namespace Dish4Good_v2
             }
         }
 
+        //private void RefreshDataGridView()
+        //{
+        //    // Bersihkan data sebelum memuat data baru
+        //    donasiDataTable.Clear();
+        //    donasiTerpenuhiDataTable.Clear();
+        //
+        //    // Dapatkan user id yang sedang login
+        //    int userId = GetLoggedInUserId();
+        //
+        //    using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //
+        //        // Ambil data donasi yang belum terpenuhi sesuai dengan user id
+        //        string queryDonasi = "SELECT * FROM DonasiRequests WHERE user_id = @user_id AND status = 'belum_terpenuhi'";
+        //        using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(queryDonasi, connection))
+        //        {
+        //            adapter.SelectCommand.Parameters.AddWithValue("@user_id", userId);
+        //            adapter.Fill(donasiDataTable);
+        //        }
+        //
+        //        // Ambil data donasi yang sudah terpenuhi sesuai dengan user id
+        //        string queryDonasiTerpenuhi = "SELECT * FROM DonasiRequests WHERE user_id = @user_id AND status = 'terpenuhi'";
+        //        using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(queryDonasiTerpenuhi, connection))
+        //        {
+        //            adapter.SelectCommand.Parameters.AddWithValue("@user_id", userId);
+        //            adapter.Fill(donasiTerpenuhiDataTable);
+        //        }
+        //    }
+        //}
+
         private void RefreshDataGridView()
         {
             // Bersihkan data sebelum memuat data baru
@@ -108,6 +139,7 @@ namespace Dish4Good_v2
                 }
             }
         }
+
 
 
         private int GetLoggedInUserId()
