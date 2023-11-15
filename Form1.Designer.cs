@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             lblTitleLogin = new Label();
-            lblTipe = new Label();
-            tbTipe = new TextBox();
             lblDescLogin = new Label();
             tbUsername = new TextBox();
             lblUsername = new Label();
@@ -38,8 +36,8 @@
             lblPassword = new Label();
             btnLogin = new Button();
             PnlLogin = new Panel();
-            label6 = new Label();
             btnRegisPage = new Button();
+            label6 = new Label();
             pictureBox1 = new PictureBox();
             PnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -49,77 +47,62 @@
             // 
             lblTitleLogin.AutoSize = true;
             lblTitleLogin.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitleLogin.Location = new Point(206, 48);
+            lblTitleLogin.Location = new Point(127, 30);
+            lblTitleLogin.Margin = new Padding(2, 0, 2, 0);
             lblTitleLogin.Name = "lblTitleLogin";
-            lblTitleLogin.Size = new Size(310, 72);
+            lblTitleLogin.Size = new Size(197, 46);
             lblTitleLogin.TabIndex = 0;
             lblTitleLogin.Text = "Dish4Good";
-            // 
-            // lblTipe
-            // 
-            lblTipe.AutoSize = true;
-            lblTipe.Location = new Point(48, 234);
-            lblTipe.Name = "lblTipe";
-            lblTipe.Size = new Size(60, 32);
-            lblTipe.TabIndex = 1;
-            lblTipe.Text = "Tipe";
-            // 
-            // tbTipe
-            // 
-            tbTipe.BackColor = Color.White;
-            tbTipe.ForeColor = Color.DarkGray;
-            tbTipe.Location = new Point(48, 282);
-            tbTipe.Name = "tbTipe";
-            tbTipe.Size = new Size(604, 39);
-            tbTipe.TabIndex = 4;
-            tbTipe.Text = "e.g. Penerima/Donatur";
             // 
             // lblDescLogin
             // 
             lblDescLogin.AutoSize = true;
             lblDescLogin.BackColor = Color.Transparent;
             lblDescLogin.ForeColor = Color.DimGray;
-            lblDescLogin.Location = new Point(48, 139);
+            lblDescLogin.Location = new Point(30, 87);
+            lblDescLogin.Margin = new Padding(2, 0, 2, 0);
             lblDescLogin.Name = "lblDescLogin";
-            lblDescLogin.Size = new Size(578, 32);
+            lblDescLogin.Size = new Size(360, 20);
             lblDescLogin.TabIndex = 5;
             lblDescLogin.Text = "Selamat datang kembali! ayo segera masuk sekarang";
             // 
             // tbUsername
             // 
-            tbUsername.ForeColor = Color.DarkGray;
-            tbUsername.Location = new Point(48, 413);
+            tbUsername.ForeColor = Color.Black;
+            tbUsername.Location = new Point(30, 199);
+            tbUsername.Margin = new Padding(2);
             tbUsername.Name = "tbUsername";
-            tbUsername.Size = new Size(604, 39);
+            tbUsername.Size = new Size(373, 27);
             tbUsername.TabIndex = 7;
-            tbUsername.Text = "e.g. Axel Zaki Ramadhan";
             // 
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(48, 365);
+            lblUsername.Location = new Point(30, 169);
+            lblUsername.Margin = new Padding(2, 0, 2, 0);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(121, 32);
+            lblUsername.Size = new Size(75, 20);
             lblUsername.TabIndex = 6;
             lblUsername.Text = "Username";
             // 
             // tbPassword
             // 
-            tbPassword.ForeColor = Color.DarkGray;
-            tbPassword.Location = new Point(48, 549);
+            tbPassword.ForeColor = Color.Black;
+            tbPassword.Location = new Point(30, 284);
+            tbPassword.Margin = new Padding(2);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(604, 39);
+            tbPassword.Size = new Size(373, 27);
             tbPassword.TabIndex = 9;
-            tbPassword.Text = "e.g. Tes***345";
             tbPassword.TextChanged += tbPassword_TextChanged;
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPassword.Location = new Point(48, 501);
+            lblPassword.Location = new Point(30, 254);
+            lblPassword.Margin = new Padding(2, 0, 2, 0);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(111, 32);
+            lblPassword.Size = new Size(70, 20);
             lblPassword.TabIndex = 8;
             lblPassword.Text = "Password";
             // 
@@ -128,12 +111,14 @@
             btnLogin.BackColor = Color.DodgerBlue;
             btnLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(48, 674);
+            btnLogin.Location = new Point(30, 421);
+            btnLogin.Margin = new Padding(2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(604, 74);
+            btnLogin.Size = new Size(372, 46);
             btnLogin.TabIndex = 10;
             btnLogin.Text = "Masuk";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click_1;
             // 
             // PnlLogin
             // 
@@ -147,23 +132,11 @@
             PnlLogin.Controls.Add(lblUsername);
             PnlLogin.Controls.Add(lblTitleLogin);
             PnlLogin.Controls.Add(lblPassword);
-            PnlLogin.Controls.Add(lblTipe);
-            PnlLogin.Controls.Add(tbTipe);
-            PnlLogin.Location = new Point(668, 32);
+            PnlLogin.Location = new Point(411, 20);
+            PnlLogin.Margin = new Padding(2);
             PnlLogin.Name = "PnlLogin";
-            PnlLogin.Size = new Size(709, 880);
+            PnlLogin.Size = new Size(436, 550);
             PnlLogin.TabIndex = 12;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.ForeColor = Color.DimGray;
-            label6.Location = new Point(48, 804);
-            label6.Name = "label6";
-            label6.Size = new Size(296, 32);
-            label6.TabIndex = 11;
-            label6.Text = "Kamu belum punya Akun?";
             // 
             // btnRegisPage
             // 
@@ -172,31 +145,47 @@
             btnRegisPage.FlatStyle = FlatStyle.Flat;
             btnRegisPage.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnRegisPage.ForeColor = Color.DodgerBlue;
-            btnRegisPage.Location = new Point(339, 797);
+            btnRegisPage.Location = new Point(209, 498);
+            btnRegisPage.Margin = new Padding(2);
             btnRegisPage.Name = "btnRegisPage";
-            btnRegisPage.Size = new Size(150, 46);
+            btnRegisPage.Size = new Size(92, 29);
             btnRegisPage.TabIndex = 12;
             btnRegisPage.Text = "Daftar";
             btnRegisPage.TextAlign = ContentAlignment.MiddleLeft;
             btnRegisPage.UseVisualStyleBackColor = false;
+            btnRegisPage.Click += btnRegisPage_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.ForeColor = Color.DimGray;
+            label6.Location = new Point(30, 502);
+            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(181, 20);
+            label6.TabIndex = 11;
+            label6.Text = "Kamu belum punya Akun?";
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DodgerBlue;
-            pictureBox1.Location = new Point(38, 32);
+            pictureBox1.Location = new Point(23, 20);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(598, 880);
+            pictureBox1.Size = new Size(368, 550);
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateGray;
-            ClientSize = new Size(1414, 953);
+            ClientSize = new Size(870, 596);
             Controls.Add(pictureBox1);
             Controls.Add(PnlLogin);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Login Dish4Good";
             PnlLogin.ResumeLayout(false);
@@ -208,8 +197,6 @@
         #endregion
 
         private Label lblTitleLogin;
-        private Label lblTipe;
-        private TextBox tbTipe;
         private Label lblDescLogin;
         private TextBox tbUsername;
         private Label lblUsername;

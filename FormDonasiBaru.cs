@@ -13,71 +13,79 @@ namespace Dish4Good_v2
 {
     public partial class FormDonasiBaru : Form
     {
-        private const string ConnectionString = "Host=localhost;Username=postgres;Password=1234;Database=Dish4Good";
-        private int userID;
+        private const string connectionString = "Host=localhost;Username=postgres;Password=1234;Database=Dish4Good";
 
-        public FormDonasiBaru(int userID)
+        public FormDonasiBaru()
         {
             InitializeComponent();
-            this.userID = userID;
 
-            // Inisialisasi combobox dengan jenis-jenis donasi yang mungkin
+            // Inisiasi isi ComboBox untuk jenis donasi
             cmbJenisDonasi.Items.Add("Makanan");
             cmbJenisDonasi.Items.Add("Minuman");
-            cmbJenisDonasi.SelectedIndex = 0; // Pilih item pertama sebagai default
+
+            // Pilih default jenis donasi (opsional)
+            cmbJenisDonasi.SelectedIndex = 0;
         }
 
-        private void btnBuatDonasi_Click(object sender, EventArgs e)
+        private void btnTambahDonasi_Click(object sender, EventArgs e)
         {
-            // Ambil data dari form
-            string jenisDonasi = cmbJenisDonasi.SelectedItem.ToString();
-            string deskripsi = txtDeskripsi.Text;
+            string jenisDonasi = cmbJenisDonasi.Text;
+            string pesanDonasi = txtPesanDonasi.Text;
 
-            // Validasi data (sesuai kebutuhan)
+            // Validasi data input (sesuai kebutuhan)
 
-            // Simpan permintaan donasi ke database
-            if (BuatPermintaanDonasi(jenisDonasi, deskripsi))
-            {
-                MessageBox.Show("Permintaan donasi berhasil dibuat!");
-                this.Close(); // Menutup form setelah permintaan donasi dibuat
-            }
-            else
-            {
-                MessageBox.Show("Gagal membuat permintaan donasi!");
-            }
+            // Simpan permintaan donasi baru ke database
+            SaveDonasiToDatabase(jenisDonasi, pesanDonasi);
+
+            MessageBox.Show("Permintaan donasi berhasil ditambahkan!");
+
+            // Tutup form setelah menambahkan permintaan donasi
+            this.Close();
         }
 
-        private bool BuatPermintaanDonasi(string jenisDonasi, string deskripsi)
+        private void SaveDonasiToDatabase(string jenisDonasi, string pesanDonasi)
         {
-            try
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
-                using (NpgsqlConnection connection = new NpgsqlConnection(ConnectionString))
+                connection.Open();
+
+                // Gantilah user_id sesuai dengan cara Anda menyimpan informasi pengguna yang login
+                int userId = GetLoggedInUserId();
+
+                string query = "INSERT INTO DonasiRequests (user_id, donation_type, request_message) VALUES (@user_id, @jenisDonasi, @pesanDonasi)";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, connection))
                 {
-                    connection.Open();
+                    cmd.Parameters.AddWithValue("@user_id", userId);
+                    cmd.Parameters.AddWithValue("@jenisDonasi", jenisDonasi);
+                    cmd.Parameters.AddWithValue("@pesanDonasi", pesanDonasi);
 
-                    using (NpgsqlCommand cmd = new NpgsqlCommand())
-                    {
-                        cmd.Connection = connection;
-                        cmd.CommandType = CommandType.Text;
-
-                        // Query untuk menyimpan permintaan donasi ke database
-                        cmd.CommandText = "INSERT INTO PermintaanDonasi (PenerimaDonasiID, JenisDonasi, Status, TanggalPermintaan, Deskripsi) VALUES (@userID, @jenisDonasi, 'Pending', CURRENT_DATE, @deskripsi)";
-
-                        cmd.Parameters.AddWithValue("@userID", userID);
-                        cmd.Parameters.AddWithValue("@jenisDonasi", jenisDonasi);
-                        cmd.Parameters.AddWithValue("@deskripsi", deskripsi);
-
-                        int result = cmd.ExecuteNonQuery();
-
-                        return result > 0; // Jika berhasil menyimpan, result akan lebih besar dari 0
-                    }
+                    cmd.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Terjadi kesalahan: {ex.Message}");
-                return false;
-            }
+        }
+
+        private int GetLoggedInUserId()
+        {
+            // Implementasi metode ini sesuai dengan cara Anda menyimpan informasi pengguna yang login
+            // Misalnya, Anda dapat menyimpan ID pengguna yang login pada variabel atau properti global.
+            return 1; // Ganti dengan implementasi sesuai kebutuhan
+        }
+
+        private void btnTambahDonasi_Click_1(object sender, EventArgs e)
+        {
+            string jenisDonasi = cmbJenisDonasi.Text;
+            string pesanDonasi = txtPesanDonasi.Text;
+
+            // Validasi data input (sesuai kebutuhan)
+
+            // Simpan permintaan donasi baru ke database
+            SaveDonasiToDatabase(jenisDonasi, pesanDonasi);
+
+            MessageBox.Show("Permintaan donasi berhasil ditambahkan!");
+
+            // Tutup form setelah menambahkan permintaan donasi
+            this.Close();
         }
     }
 }
