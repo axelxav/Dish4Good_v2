@@ -112,8 +112,6 @@ namespace Dish4Good_v2
 
         private int GetLoggedInUserId()
         {
-            // Implementasi metode ini sesuai dengan cara Anda menyimpan informasi pengguna yang login
-            // Misalnya, Anda dapat menyimpan ID pengguna yang login pada variabel atau properti global.
             return loggedInUserId; // Ganti dengan implementasi sesuai kebutuhan
         }
 
@@ -133,7 +131,7 @@ namespace Dish4Good_v2
         private void btnTambah_Click(object sender, EventArgs e)
         {
             // Buka form dialog untuk menambahkan permintaan donasi baru
-            FormDonasiBaru tambahDonasiForm = new FormDonasiBaru();
+            FormDonasiBaru tambahDonasiForm = new FormDonasiBaru(loggedInUserId);
             tambahDonasiForm.ShowDialog();
 
             // Refresh DataGridView setelah menutup form dialog

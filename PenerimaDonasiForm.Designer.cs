@@ -65,7 +65,7 @@
             // 
             lblPenerima.AutoSize = true;
             lblPenerima.Font = new Font("Segoe UI", 7F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPenerima.Location = new Point(790, 36);
+            lblPenerima.Location = new Point(799, 34);
             lblPenerima.Margin = new Padding(2, 0, 2, 0);
             lblPenerima.Name = "lblPenerima";
             lblPenerima.Size = new Size(60, 15);
@@ -77,7 +77,7 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblUsername.Location = new Point(730, 12);
+            lblUsername.Location = new Point(741, 12);
             lblUsername.Margin = new Padding(2, 0, 2, 0);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(118, 20);
