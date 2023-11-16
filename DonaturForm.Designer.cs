@@ -36,50 +36,50 @@
             dgvDonasiDonatur = new DataGridView();
             lblStatusKonfirmasiDonatur = new Label();
             pnlDaftar = new Panel();
+            btnDonasiDonatur = new Button();
             btnLoadData = new Button();
             dgvPermintaanDonasi = new DataGridView();
             lblDaftarPermintaan = new Label();
             btnLogOut = new Button();
-            btnDonasiDonatur = new Button();
+            pnlAkunInfo = new Panel();
             pnlHeader.SuspendLayout();
             pnlRiwayat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDonasiDonatur).BeginInit();
             pnlDaftar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPermintaanDonasi).BeginInit();
+            pnlAkunInfo.SuspendLayout();
             SuspendLayout();
             // 
             // pnlHeader
             // 
             pnlHeader.BackColor = Color.White;
-            pnlHeader.Controls.Add(lblDonatur);
-            pnlHeader.Controls.Add(lblUsernameDonatur);
+            pnlHeader.Controls.Add(pnlAkunInfo);
             pnlHeader.Controls.Add(lblBrand);
             pnlHeader.Location = new Point(0, 0);
-            pnlHeader.Margin = new Padding(2);
             pnlHeader.Name = "pnlHeader";
-            pnlHeader.Size = new Size(871, 62);
+            pnlHeader.Size = new Size(1415, 99);
             pnlHeader.TabIndex = 1;
             // 
             // lblDonatur
             // 
+            lblDonatur.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblDonatur.AutoSize = true;
             lblDonatur.Font = new Font("Segoe UI", 7F, FontStyle.Bold, GraphicsUnit.Point);
-            lblDonatur.Location = new Point(790, 36);
-            lblDonatur.Margin = new Padding(2, 0, 2, 0);
+            lblDonatur.Location = new Point(121, 51);
             lblDonatur.Name = "lblDonatur";
-            lblDonatur.Size = new Size(53, 15);
+            lblDonatur.Size = new Size(87, 25);
             lblDonatur.TabIndex = 4;
             lblDonatur.Text = "Donatur";
             lblDonatur.TextAlign = ContentAlignment.TopRight;
             // 
             // lblUsernameDonatur
             // 
+            lblUsernameDonatur.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblUsernameDonatur.AutoSize = true;
             lblUsernameDonatur.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblUsernameDonatur.Location = new Point(730, 14);
-            lblUsernameDonatur.Margin = new Padding(2, 0, 2, 0);
+            lblUsernameDonatur.Location = new Point(17, 7);
             lblUsernameDonatur.Name = "lblUsernameDonatur";
-            lblUsernameDonatur.Size = new Size(118, 20);
+            lblUsernameDonatur.Size = new Size(191, 32);
             lblUsernameDonatur.TabIndex = 3;
             lblUsernameDonatur.Text = "Nama Pengguna";
             lblUsernameDonatur.TextAlign = ContentAlignment.TopRight;
@@ -88,71 +88,86 @@
             // 
             lblBrand.AutoSize = true;
             lblBrand.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            lblBrand.Location = new Point(20, 12);
-            lblBrand.Margin = new Padding(2, 0, 2, 0);
+            lblBrand.Location = new Point(32, 19);
             lblBrand.Name = "lblBrand";
-            lblBrand.Size = new Size(159, 37);
+            lblBrand.Size = new Size(249, 59);
             lblBrand.TabIndex = 2;
             lblBrand.Text = "Dish4Good";
             // 
             // pnlRiwayat
             // 
+            pnlRiwayat.AutoSize = true;
             pnlRiwayat.BackColor = Color.White;
             pnlRiwayat.Controls.Add(dgvDonasiDonatur);
             pnlRiwayat.Controls.Add(lblStatusKonfirmasiDonatur);
-            pnlRiwayat.Location = new Point(20, 82);
-            pnlRiwayat.Margin = new Padding(2);
+            pnlRiwayat.Location = new Point(32, 131);
             pnlRiwayat.Name = "pnlRiwayat";
-            pnlRiwayat.Size = new Size(305, 456);
+            pnlRiwayat.Size = new Size(496, 730);
             pnlRiwayat.TabIndex = 2;
             // 
             // dgvDonasiDonatur
             // 
+            dgvDonasiDonatur.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvDonasiDonatur.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dgvDonasiDonatur.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDonasiDonatur.Location = new Point(17, 62);
-            dgvDonasiDonatur.Margin = new Padding(2);
+            dgvDonasiDonatur.Location = new Point(28, 99);
             dgvDonasiDonatur.Name = "dgvDonasiDonatur";
             dgvDonasiDonatur.RowHeadersWidth = 82;
             dgvDonasiDonatur.RowTemplate.Height = 41;
-            dgvDonasiDonatur.Size = new Size(270, 376);
+            dgvDonasiDonatur.Size = new Size(439, 602);
             dgvDonasiDonatur.TabIndex = 3;
             // 
             // lblStatusKonfirmasiDonatur
             // 
             lblStatusKonfirmasiDonatur.AutoSize = true;
             lblStatusKonfirmasiDonatur.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblStatusKonfirmasiDonatur.Location = new Point(17, 18);
-            lblStatusKonfirmasiDonatur.Margin = new Padding(2, 0, 2, 0);
+            lblStatusKonfirmasiDonatur.Location = new Point(28, 29);
             lblStatusKonfirmasiDonatur.Name = "lblStatusKonfirmasiDonatur";
-            lblStatusKonfirmasiDonatur.Size = new Size(159, 28);
+            lblStatusKonfirmasiDonatur.Size = new Size(251, 45);
             lblStatusKonfirmasiDonatur.TabIndex = 2;
             lblStatusKonfirmasiDonatur.Text = "Riwayat Donasi";
             lblStatusKonfirmasiDonatur.Click += lblStatusKonfirmasiDonatur_Click;
             // 
             // pnlDaftar
             // 
+            pnlDaftar.AutoSize = true;
             pnlDaftar.BackColor = Color.White;
             pnlDaftar.Controls.Add(btnDonasiDonatur);
             pnlDaftar.Controls.Add(btnLoadData);
             pnlDaftar.Controls.Add(dgvPermintaanDonasi);
             pnlDaftar.Controls.Add(lblDaftarPermintaan);
-            pnlDaftar.Location = new Point(348, 82);
-            pnlDaftar.Margin = new Padding(2);
+            pnlDaftar.Location = new Point(566, 131);
             pnlDaftar.Name = "pnlDaftar";
-            pnlDaftar.Size = new Size(500, 500);
+            pnlDaftar.Size = new Size(812, 800);
             pnlDaftar.TabIndex = 3;
+            // 
+            // btnDonasiDonatur
+            // 
+            btnDonasiDonatur.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnDonasiDonatur.BackColor = Color.DodgerBlue;
+            btnDonasiDonatur.FlatAppearance.BorderSize = 0;
+            btnDonasiDonatur.FlatStyle = FlatStyle.Flat;
+            btnDonasiDonatur.Font = new Font("Segoe UI", 7F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDonasiDonatur.ForeColor = Color.White;
+            btnDonasiDonatur.Location = new Point(254, 723);
+            btnDonasiDonatur.Name = "btnDonasiDonatur";
+            btnDonasiDonatur.Size = new Size(257, 50);
+            btnDonasiDonatur.TabIndex = 5;
+            btnDonasiDonatur.Text = "Donasi";
+            btnDonasiDonatur.UseVisualStyleBackColor = false;
+            btnDonasiDonatur.Click += btnDonasiDonatur_Click_1;
             // 
             // btnLoadData
             // 
+            btnLoadData.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnLoadData.BackColor = Color.LightSlateGray;
             btnLoadData.FlatAppearance.BorderSize = 0;
             btnLoadData.FlatStyle = FlatStyle.Flat;
             btnLoadData.Font = new Font("Segoe UI", 7F, FontStyle.Bold, GraphicsUnit.Point);
             btnLoadData.ForeColor = Color.White;
-            btnLoadData.Location = new Point(318, 452);
-            btnLoadData.Margin = new Padding(2);
+            btnLoadData.Location = new Point(517, 723);
             btnLoadData.Name = "btnLoadData";
-            btnLoadData.Size = new Size(158, 31);
+            btnLoadData.Size = new Size(257, 50);
             btnLoadData.TabIndex = 6;
             btnLoadData.Text = "Muat Ulang";
             btnLoadData.UseVisualStyleBackColor = false;
@@ -160,23 +175,23 @@
             // 
             // dgvPermintaanDonasi
             // 
+            dgvPermintaanDonasi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvPermintaanDonasi.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dgvPermintaanDonasi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPermintaanDonasi.Location = new Point(18, 62);
-            dgvPermintaanDonasi.Margin = new Padding(2);
+            dgvPermintaanDonasi.Location = new Point(29, 99);
             dgvPermintaanDonasi.Name = "dgvPermintaanDonasi";
             dgvPermintaanDonasi.RowHeadersWidth = 82;
             dgvPermintaanDonasi.RowTemplate.Height = 41;
-            dgvPermintaanDonasi.Size = new Size(458, 376);
+            dgvPermintaanDonasi.Size = new Size(744, 602);
             dgvPermintaanDonasi.TabIndex = 1;
             // 
             // lblDaftarPermintaan
             // 
             lblDaftarPermintaan.AutoSize = true;
             lblDaftarPermintaan.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblDaftarPermintaan.Location = new Point(18, 18);
-            lblDaftarPermintaan.Margin = new Padding(2, 0, 2, 0);
+            lblDaftarPermintaan.Location = new Point(29, 29);
             lblDaftarPermintaan.Name = "lblDaftarPermintaan";
-            lblDaftarPermintaan.Size = new Size(187, 28);
+            lblDaftarPermintaan.Size = new Size(296, 45);
             lblDaftarPermintaan.TabIndex = 0;
             lblDaftarPermintaan.Text = "Daftar Permintaan";
             // 
@@ -187,42 +202,35 @@
             btnLogOut.FlatStyle = FlatStyle.Flat;
             btnLogOut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogOut.ForeColor = Color.White;
-            btnLogOut.Location = new Point(20, 552);
-            btnLogOut.Margin = new Padding(2);
+            btnLogOut.Location = new Point(32, 883);
             btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(305, 31);
+            btnLogOut.Size = new Size(496, 50);
             btnLogOut.TabIndex = 4;
             btnLogOut.Text = "Keluar";
             btnLogOut.UseVisualStyleBackColor = false;
             btnLogOut.Click += btnLogOut_Click;
             // 
-            // btnDonasiDonatur
+            // pnlAkunInfo
             // 
-            btnDonasiDonatur.BackColor = Color.DodgerBlue;
-            btnDonasiDonatur.FlatAppearance.BorderSize = 0;
-            btnDonasiDonatur.FlatStyle = FlatStyle.Flat;
-            btnDonasiDonatur.Font = new Font("Segoe UI", 7F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDonasiDonatur.ForeColor = Color.White;
-            btnDonasiDonatur.Location = new Point(156, 452);
-            btnDonasiDonatur.Margin = new Padding(2);
-            btnDonasiDonatur.Name = "btnDonasiDonatur";
-            btnDonasiDonatur.Size = new Size(158, 31);
-            btnDonasiDonatur.TabIndex = 5;
-            btnDonasiDonatur.Text = "Donasi";
-            btnDonasiDonatur.UseVisualStyleBackColor = false;
-            btnDonasiDonatur.Click += btnDonasiDonatur_Click_1;
+            pnlAkunInfo.BackColor = Color.Transparent;
+            pnlAkunInfo.Controls.Add(lblUsernameDonatur);
+            pnlAkunInfo.Controls.Add(lblDonatur);
+            pnlAkunInfo.Location = new Point(1170, 2);
+            pnlAkunInfo.Name = "pnlAkunInfo";
+            pnlAkunInfo.Size = new Size(208, 94);
+            pnlAkunInfo.TabIndex = 5;
             // 
             // DonaturForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.SlateGray;
-            ClientSize = new Size(870, 596);
+            ClientSize = new Size(1414, 954);
             Controls.Add(btnLogOut);
             Controls.Add(pnlDaftar);
             Controls.Add(pnlRiwayat);
             Controls.Add(pnlHeader);
-            Margin = new Padding(2);
             Name = "DonaturForm";
             Text = "Pengirim Donatur";
             pnlHeader.ResumeLayout(false);
@@ -233,7 +241,10 @@
             pnlDaftar.ResumeLayout(false);
             pnlDaftar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPermintaanDonasi).EndInit();
+            pnlAkunInfo.ResumeLayout(false);
+            pnlAkunInfo.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -251,5 +262,6 @@
         private Label lblDaftarPermintaan;
         private Button btnLogOut;
         private Button btnDonasiDonatur;
+        private Panel pnlAkunInfo;
     }
 }
