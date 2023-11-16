@@ -90,5 +90,10 @@ namespace Dish4Good_v2
             loginForm.Show();
             this.Hide(); // Sembunyikan form registrasi jika diperlukan
         }
+
+        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
