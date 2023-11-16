@@ -152,5 +152,10 @@ namespace Dish4Good_v2
                 MessageBox.Show("Pilih permintaan donasi yang ingin Anda donasi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void lblUsernameDonatur_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
