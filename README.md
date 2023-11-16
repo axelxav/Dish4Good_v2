@@ -5,5 +5,5 @@ plat AB <br>
 Ketua Kelompok : Axel Xaverius Tamtama-21/479414/TK/52892 <br>
 Anggota 1 : Rafly Zaki Ramadhan-21/483121/TK/53403 <br>
 
-![image](https://github.com/axelxav/Dish4Good_v2/assets/119383528/bdb96f90-fb49-4777-a86f-fe136677d1f7)
+![image](https://github.com/axelxav/Dish4Good_v2/assets/119383528/935162b6-310f-4d8a-a47d-b25fb4a3bd13)
 
