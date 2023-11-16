@@ -4,7 +4,7 @@ namespace Dish4Good_v2
 {
     public partial class Form1 : Form
     {
-        private const string connectionString = "Host=postgres://hfncgxfq:hyufizdquAbkRTS7YQvkbAESPIIFkfQJ@suleiman.db.elephantsql.com/hfncgxfq;Username=hfncgxfq;Password=hyufizdquAbkRTS7YQvkbAESPIIFkfQJ;Database=hfncgxfq;";
+        private const string connectionString = "Host=suleiman.db.elephantsql.com;Port=5432;Username=hfncgxfq;Password=hyufizdquAbkRTS7YQvkbAESPIIFkfQJ;Database=hfncgxfq;";
         //private const string connectionString = "Host=localhost;Username=postgres;Password=1234;Database=Dish4Good";
         private int loggedInUserId; // Variabel untuk menyimpan user id yang sedang login
 
@@ -97,6 +97,11 @@ namespace Dish4Good_v2
             FormRegistrasi registrasi = new FormRegistrasi();
             registrasi.Show();
             this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
