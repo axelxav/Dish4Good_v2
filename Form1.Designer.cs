@@ -170,7 +170,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DodgerBlue;
-            pictureBox1.Image = Properties.Resources.Illustration_Dish4Good__1_;
+            pictureBox1.Image = Properties.Resources.Illus_good;
             pictureBox1.Location = new Point(23, 20);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
