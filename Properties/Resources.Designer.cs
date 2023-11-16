@@ -63,9 +63,10 @@ namespace Dish4Good_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Illustration_Dish4Good {
+        internal static System.Drawing.Bitmap Illus_good
+        {
             get {
-                object obj = ResourceManager.GetObject("Illustration_Dish4Good", resourceCulture);
+                object obj = ResourceManager.GetObject("Illus_good", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

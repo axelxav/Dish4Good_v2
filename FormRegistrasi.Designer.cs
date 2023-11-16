@@ -60,7 +60,7 @@
             PnlLogin.Controls.Add(lblPassword);
             PnlLogin.Controls.Add(lblTipe);
             PnlLogin.Location = new Point(411, 20);
-            PnlLogin.Margin = new Padding(2, 2, 2, 2);
+            PnlLogin.Margin = new Padding(2);
             PnlLogin.Name = "PnlLogin";
             PnlLogin.Size = new Size(436, 550);
             PnlLogin.TabIndex = 13;
@@ -84,7 +84,7 @@
             btnLoginPage.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnLoginPage.ForeColor = Color.DodgerBlue;
             btnLoginPage.Location = new Point(209, 498);
-            btnLoginPage.Margin = new Padding(2, 2, 2, 2);
+            btnLoginPage.Margin = new Padding(2);
             btnLoginPage.Name = "btnLoginPage";
             btnLoginPage.Size = new Size(92, 29);
             btnLoginPage.TabIndex = 12;
@@ -109,7 +109,7 @@
             // 
             tbPassword.ForeColor = Color.Black;
             tbPassword.Location = new Point(30, 343);
-            tbPassword.Margin = new Padding(2, 2, 2, 2);
+            tbPassword.Margin = new Padding(2);
             tbPassword.Name = "tbPassword";
             tbPassword.Size = new Size(373, 27);
             tbPassword.TabIndex = 9;
@@ -120,7 +120,7 @@
             btnRegis.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnRegis.ForeColor = Color.White;
             btnRegis.Location = new Point(30, 421);
-            btnRegis.Margin = new Padding(2, 2, 2, 2);
+            btnRegis.Margin = new Padding(2);
             btnRegis.Name = "btnRegis";
             btnRegis.Size = new Size(372, 46);
             btnRegis.TabIndex = 10;
@@ -144,7 +144,7 @@
             // 
             tbUsername.ForeColor = Color.Black;
             tbUsername.Location = new Point(30, 258);
-            tbUsername.Margin = new Padding(2, 2, 2, 2);
+            tbUsername.Margin = new Padding(2);
             tbUsername.Name = "tbUsername";
             tbUsername.Size = new Size(373, 27);
             tbUsername.TabIndex = 7;
@@ -194,9 +194,9 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DodgerBlue;
-            pictureBox1.Image = Properties.Resources.Illustration_Dish4Good__1_;
+            pictureBox1.Image = Properties.Resources.Illus_good;
             pictureBox1.Location = new Point(23, 20);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(368, 550);
             pictureBox1.TabIndex = 14;
@@ -210,7 +210,7 @@
             ClientSize = new Size(870, 596);
             Controls.Add(pictureBox1);
             Controls.Add(PnlLogin);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "FormRegistrasi";
             Text = "Daftar Dish4Good";
             PnlLogin.ResumeLayout(false);
