@@ -212,5 +212,25 @@ namespace Dish4Good_v2
                 }
             }
         }
+
+        private void dgvDonasi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void PenerimaDonasiForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvDonasiTerpenuhi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
