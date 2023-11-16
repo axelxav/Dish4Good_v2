@@ -4,7 +4,7 @@ namespace Dish4Good_v2
 {
     public partial class Form1 : Form
     {
-        private const string connectionString = "Host=localhost;Username=postgres;Password=1234;Database=Dish4Good";
+        private const string connectionString = "Host=localhost;Username=postgres;Password=1816;Database=Dish4Good";
         private int loggedInUserId; // Variabel untuk menyimpan user id yang sedang login
 
         public int LoggedInUserId
