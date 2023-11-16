@@ -6,7 +6,6 @@ namespace Dish4Good_v2
     {
         private const string connectionString = "Host=postgres://hfncgxfq:hyufizdquAbkRTS7YQvkbAESPIIFkfQJ@suleiman.db.elephantsql.com/hfncgxfq;Username=hfncgxfq;Password=hyufizdquAbkRTS7YQvkbAESPIIFkfQJ;Database=hfncgxfq;";
         //private const string connectionString = "Host=localhost;Username=postgres;Password=1234;Database=Dish4Good";
-
         private int loggedInUserId; // Variabel untuk menyimpan user id yang sedang login
 
         public int LoggedInUserId
