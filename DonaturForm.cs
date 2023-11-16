@@ -13,7 +13,7 @@ namespace Dish4Good_v2
 {
     public partial class DonaturForm : Form
     {
-        private const string connectionString = "Host=localhost;Username=postgres;Password=1234;Database=Dish4Good";
+        private const string connectionString = "Host=postgres://hfncgxfq:hyufizdquAbkRTS7YQvkbAESPIIFkfQJ@suleiman.db.elephantsql.com/hfncgxfq;Username=hfncgxfq;Password=hyufizdquAbkRTS7YQvkbAESPIIFkfQJ;Database=hfncgxfq;";
         private DataTable donasiDataTable;
         private DataTable donasiDonaturDataTable;
         private int loggedInUserId;

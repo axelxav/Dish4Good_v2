@@ -13,7 +13,7 @@ namespace Dish4Good_v2
 {
     public partial class FormRegistrasi : Form
     {
-        private const string connectionString = "Host=localhost;Username=postgres;Password=1234;Database=Dish4Good";
+        private const string connectionString = "Host=suleiman.db.elephantsql.com;Port=5432;Username=hfncgxfq;Password=hyufizdquAbkRTS7YQvkbAESPIIFkfQJ;Database=hfncgxfq;";
 
         public FormRegistrasi()
         {
